@@ -7,6 +7,8 @@ export class FormPage {
     readonly alterEgoInputField: Locator
     readonly submitButton: Locator
     readonly newHeroButton: Locator
+    readonly nameTextDisplayed: Locator
+    readonly alterEgoTextDisplayed: Locator
    
 
     constructor(page: Page){
@@ -15,6 +17,8 @@ export class FormPage {
         this.alterEgoInputField = this.page.locator("#alterEgo")
         this.submitButton = this.page.getByRole("button", {name: "Submit" })
         this.newHeroButton = this.page.getByRole("button", {name: "New Hero" })
+        this.nameTextDisplayed = this.page.locator('col-xs-3', {hasText: "Name"})
+        this.alterEgoTextDisplayed = this.page.locator('col-xs-3', {hasText: "Alter Ego"})
     }
 
     async clearAndFillFields(name: string, alterEgo: string, heroPower: string){
