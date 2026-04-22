@@ -38,10 +38,7 @@ export class FormPage {
             await this.alterEgoInputField.fill(alterEgo)
          }
 
-        if(heroPower != ""){
-            await this.page.selectOption('#power', {label: heroPower})
-         }
-    
+        await this.page.selectOption('#power', {label: heroPower})
 
     }
 
