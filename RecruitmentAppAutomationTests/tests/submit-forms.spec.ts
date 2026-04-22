@@ -1,8 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { NavigationPage } from '../page-objects/NavigationPage'
 import { FormPage } from '../page-objects/FormPage';
-import { WelcomePage } from '../page-objects/WelcomePage';
-import { StepperPage } from '../page-objects/StepperPage';
 
 
  test.beforeEach( async ({page}) =>{
